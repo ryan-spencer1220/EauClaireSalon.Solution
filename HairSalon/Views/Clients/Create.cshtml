@@ -4,12 +4,18 @@
 
 @model HairSalon.Models.Client
 
-<h4>Add a new client</h4>
+<h4>Add New Client</h4>
 
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.Description)
-  @Html.TextBoxFor(model => model.Description)
+  @Html.LabelFor(model => model.FirstName)
+  @Html.TextBoxFor(model => model.FirstName)
+
+  @Html.LabelFor(model => model.LastName)
+  @Html.TextBoxFor(model => model.LastName)
+
+  @Html.LabelFor(model => model.PhoneNumber)
+  @Html.TextBoxFor(model => model.PhoneNumber)
 
   @Html.LabelFor(model => model.Stylist)
   @Html.DropDownList("StylistId")
