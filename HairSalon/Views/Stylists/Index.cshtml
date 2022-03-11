@@ -25,12 +25,8 @@
   </section>
   }
 </ul>
-
-@Html.ActionLink("Add new stylist", "Create", routeValues: null, htmlAttributes: new { @class = "btn btn-primary", @role="button" })
-@Html.ActionLink("Home", "Index", "Home", routeValues: null, htmlAttributes: new { @class = "btn btn-primary", @role="button" })
-
-
-
-    @* <p>@Html.ActionLink($"{stylist.Name}", "Details", new { id =stylist.StylistId })</p> *@
-
+<div class="col-12 col-lg-5">
+  @Html.ActionLink("Add new stylist", "Create", routeValues: null, htmlAttributes: new { @class = "btn btn-primary", @role="button" })
+  @Html.ActionLink("Home", "Index", "Home", routeValues: null, htmlAttributes: new { @class = "btn btn-primary", @role="button" })
+</div>
 

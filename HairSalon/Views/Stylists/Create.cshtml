@@ -8,10 +8,15 @@
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
 
   @Html.LabelFor(model => model.Specialty)
-  @Html.TextBoxFor(model => model.Specialty)
-  <input type="submit" value="Add new stylist" />
+  @Html.TextBoxFor(model => model.Specialty, new { @class = "form-control" })
+  <div class="col-12 col-lg-5">
+    <input type="submit" value="Add Stylist" class="btn btn-primary" />
+  </div>
 }
-<p>@Html.ActionLink("Show all stylists", "Index")</p>
+<div class="col-12 col-lg-5">
+  @Html.ActionLink("See all clients", "Index", "Clients", routeValues: null, htmlAttributes: new { @class = "btn btn-primary", @role="button" })
+  @Html.ActionLink("See all stylists", "Index", "Stylists", routeValues: null, htmlAttributes: new { @class = "btn btn-primary", @role="button" })
+</div>

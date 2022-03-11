@@ -14,18 +14,13 @@ div#footer {
   margin-bottom: 3%;
 }
 
-/* #splash-button-one {
-  padding: 15px 32px;
-  display: inline-block;
-}
-
-#splash-button-one {
-  padding: 15px 32px;
-  display: inline-block;
-  margin-right: 125px;
-} */
-
 .btn {
   padding: 3%;
   margin: 3%;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
 }

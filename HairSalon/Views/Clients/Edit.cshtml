@@ -10,21 +10,27 @@
 
 @using (Html.BeginForm())
 {
-  @Html.HiddenFor(model => model.ClientId)
+  <div class="lead fw-normal text-muted mb-5 mb-lg-0">
+    @Html.HiddenFor(model => model.ClientId)
 
-  @Html.LabelFor(model => model.FirstName)
-  @Html.EditorFor(model => model.FirstName)
+    @Html.LabelFor(model => model.FirstName)
+    @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
 
-  @Html.LabelFor(model => model.LastName)
-  @Html.EditorFor(model => model.LastName)
+    @Html.LabelFor(model => model.LastName)
+    @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
 
-  @Html.LabelFor(model => model.PhoneNumber)
-  @Html.EditorFor(model => model.PhoneNumber)
+    @Html.LabelFor(model => model.PhoneNumber)
+    @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control" })
 
-  @Html.LabelFor(model => model.Stylist)
-  @Html.DropDownList("StylistId")
+    @Html.LabelFor(model => model.Stylist)
+    @Html.DropDownList("StylistId", (IEnumerable<SelectListItem>)ViewBag.PriorityID, new { @class="form-control" })
 
-  <input type="submit" value="Save" />
+    <div class="col-12 col-lg-5">
+      <input type="submit" value="Edit client" class="btn btn-primary" />
+    </div>
+  </div>
 }
 
-<p>@Html.ActionLink("Back to list", "Index")</p>
+<div class="col-12 col-lg-5">
+  @Html.ActionLink("Show all clients", "Index", routeValues: null, htmlAttributes: new { @class = "btn btn-primary", @role="button" })
+</div>
