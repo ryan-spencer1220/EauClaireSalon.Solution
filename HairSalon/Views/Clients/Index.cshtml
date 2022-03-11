@@ -25,5 +25,6 @@
     </div>
   </section>
 }
-
-<p>@Html.ActionLink("Add new client", "Create")</p>
+<div class="col-12 col-lg-5">
+  @Html.ActionLink("Add new client", "Create", routeValues: null, htmlAttributes: new { @class = "btn btn-primary", @role="button" })
+</div>

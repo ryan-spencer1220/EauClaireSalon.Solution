@@ -9,13 +9,30 @@
 
 @if (Model.Count == 0)
 {
-  <h5>No clients for this stylist</h5>
+  <section class="bg-light">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+            <div class="col-12 col-lg-5">
+                <p class="lead fw-normal text-muted mb-5 mb-lg-0">No clients for this stylist</p>
+            </div>
+        </div>
+    </div>
+  </section>
 }
-<ul>
-  @foreach (Client client in Model)
-  {
-    <li>@Html.ActionLink($"{client.FirstName}", "Details", "Clients", new { id = client.ClientId })</li>
-  }
-</ul>
 
-  @Html.ActionLink("Add client", "Create", "Clients")
+@foreach (Client client in Model)
+{
+  <section class="bg-light">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+            <div class="col-12 col-lg-5">
+                <p class="lead fw-normal text-muted mb-5 mb-lg-0">@Html.ActionLink($"{client.FirstName}", "Details", "Clients", new { id = client.ClientId })</p>
+            </div>
+        </div>
+    </div>
+  </section>
+}
+
+<div class="col-12 col-lg-5">
+  @Html.ActionLink("Add client", "Create", "Clients", routeValues: null, htmlAttributes: new { @class = "btn btn-primary", @role="button" })
+</div>
