@@ -4,7 +4,7 @@
 
 @using HairSalon.Models;
 
-<h1>Stylists</h1>
+<h1 class="display-4 lh-1 mb-4">Stylists</h1>
 
 @if (@Model.Count == 0)
 {
@@ -14,9 +14,23 @@
 <ul>
   @foreach(Stylist stylist in Model)
   {
-    <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id =stylist.StylistId })</li>
+  <section class="bg-light">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+            <div class="col-12 col-lg-5">
+                <p class="lead fw-normal text-muted mb-5 mb-lg-0">@Html.ActionLink($"{stylist.Name}", "Details", new { id =stylist.StylistId })</p>
+            </div>
+        </div>
+    </div>
+  </section>
   }
 </ul>
 
-<p>@Html.ActionLink("Add new stylist", "Create")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+@Html.ActionLink("Add new stylist", "Create", routeValues: null, htmlAttributes: new { @class = "btn btn-primary", @role="button" })
+@Html.ActionLink("Home", "Index", "Home", routeValues: null, htmlAttributes: new { @class = "btn btn-primary", @role="button" })
+
+
+
+    @* <p>@Html.ActionLink($"{stylist.Name}", "Details", new { id =stylist.StylistId })</p> *@
+
+

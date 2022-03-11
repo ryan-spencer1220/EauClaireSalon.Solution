@@ -6,3 +6,26 @@ div#footer {
   padding: 8px;
   text-align: center;
 }
+
+.bg-light {
+  padding-top: 5%;
+  /* margin-top: 3%; */
+  padding-bottom: 5%;
+  margin-bottom: 3%;
+}
+
+/* #splash-button-one {
+  padding: 15px 32px;
+  display: inline-block;
+}
+
+#splash-button-one {
+  padding: 15px 32px;
+  display: inline-block;
+  margin-right: 125px;
+} */
+
+.btn {
+  padding: 3%;
+  margin: 3%;
+}
