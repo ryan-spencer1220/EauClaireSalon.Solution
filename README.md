@@ -1,6 +1,6 @@
-# PROJECT NAME
+# Eau Claire's Salon
 
-#### PROJECT DESCRIPTION
+#### C# application designed to demonstrate understanding of one-to-many databse relationship, basic MVC structure, and CRUD operations.
 
 #### By Ryan Spencer
 
@@ -14,13 +14,15 @@
 
 ## Description
 
+This application was designed for a fictional hair salon utilizing C# and MySQL. The goal of the project was to create an application that allows salon owners to create, read, update, and delete both stylists working for the salon and customers of the salon. This applicaiton demonstrates an understanding of a "one-to-many" relationship between stylists and clients, a stylist can have many clients but due to each stylist specialty, each client can only see a single stylist.
+
 ## Setup/Installation Requirements
 
 **Cloning**
 
 1. In order to utilize this page on your local machine, you will need to clone a copy of this repository using the "$ git clone {url}" command in your coding terminal.
 
-2. Navigate to your desired directory in your command terminal and run "$ git clone REPO URL"
+2. Navigate to your desired directory in your command terminal and run "$ git clone https://github.com/ryan-spencer1220/HairSalon.Solution"
 
 3. Should you wish to edit the code you cloned, you will need coding software. VS Code is an example of a free code editor, which can be downloaded at https://code.visualstudio.com/_.
 
@@ -28,27 +30,38 @@
 
 **Downloading**
 
-1. In your browser, navigate to REPO URL, and click the green "Code" button, which will provide a drop down menu. Click on "Download ZIP" at the bottom of the menu, and save it to your desired location.
+1. In your browser, navigate to https://github.com/ryan-spencer1220/HairSalon.Solution, and click the green "Code" button, which will provide a drop down menu. Click on "Download ZIP" at the bottom of the menu, and save it to your desired location.
 
 2. Once downloaded, unzip and extract the files.
 
 3. Follow the steps above to view, edit, and open the files as needed.
 
-**Running the Project**
+**Running The Project**
 
-1. While located in the root directory, navigate to the PROJECT FILE directory.
-
-2. In your terminal run the command _dotnet restore_ to add the required dependencies and tools for this project.
-
-3. To run the application, run the command _dotnet run_ and follow the prompts.
-
-**Testing the Project**
-
-1. While located in the root directory navigate to the PROJECT FILE.TESTS directory.
+1. While located in the root directory, navigate to the HairSalon directory.
 
 2. In your terminal run the command _dotnet restore_ to add the required dependencies and tools for this project.
 
-3. To run the tests attached to this application, run the command _dotnet test_ and review all responses in the terminal.
+3. To build the application, run the command _dotnet build_.
+
+4. To run the application, run the command _dotnet watch run_ and follow the prompts.
+
+**Creating a .json File & Importing SQL File**
+
+1. Create a new file in the project directory (HairSalon) titled appsettings.json which should contain the following code with ID and password replaced with your MySQL Workbench login information
+
+2. Launch MySQL Workbench, navigate to the _Administration Tab_, select _Data Import_, and _Import From Self Contained File_
+
+```
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Port=3306;database=ryan_spencer;uid=MYSQLWORKBENCHID;pwd=MYSQLWORKBENCHPASSWORD;"
+  }
+}
+
+```
+
+3. Select the included .sql file titled ryan*spencer.sql and click \_Start Import*
 
 ## Known Bugs
 
