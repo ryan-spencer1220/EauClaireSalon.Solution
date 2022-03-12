@@ -9,7 +9,7 @@
 - _C#_
 - _Git_
 - _Github_
-- _MSTest_
+- _MySQL_
 - _Markdown_
 
 ## Description
