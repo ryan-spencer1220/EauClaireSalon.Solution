@@ -1,6 +1,6 @@
 # Eau Claire's Salon
 
-#### C# application designed to demonstrate understanding of one-to-many databse relationship, basic MVC structure, and CRUD operations.
+#### C# application designed to demonstrate an understanding of one-to-many databse relationships, basic MVC structure, and CRUD operations.
 
 #### By Ryan Spencer
 
@@ -15,6 +15,8 @@
 ## Description
 
 This application was designed for a fictional hair salon utilizing C# and MySQL. The goal of the project was to create an application that allows salon owners to create, read, update, and delete both stylists working for the salon and customers of the salon. This applicaiton demonstrates an understanding of a "one-to-many" relationship between stylists and clients, a stylist can have many clients but due to each stylist specialty, each client can only see a single stylist.
+
+<img width="1228" alt="Screen Shot 2022-03-11 at 3 16 10 PM" src="https://user-images.githubusercontent.com/86761275/157994541-0c25086f-f981-43a6-b684-78f097023b01.png">
 
 ## Setup/Installation Requirements
 
